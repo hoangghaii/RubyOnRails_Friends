@@ -58,13 +58,14 @@ class FriendsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_friend
-      @friend = Friend.find(params.expect(:id))
-    end
 
-    # Only allow a list of trusted parameters through.
-    def friend_params
-      params.expect(friend: [ :first_name, :last_name, :email, :phone, :twitter ])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_friend
+    @friend = Friend.find(params.expect(:id))
+  end
+
+  # Only allow a list of trusted parameters through.
+  def friend_params
+    params.expect(friend: [:first_name, :last_name, :email, :phone, :twitter, :user_id])
+  end
 end

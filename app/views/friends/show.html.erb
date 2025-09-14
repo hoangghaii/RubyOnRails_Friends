@@ -1,16 +1,17 @@
-<div class="card" >
+<div class="card">
   <div class="card-body">
     <h5 class="card-title">
       <%= @friend.first_name %>
       <%= @friend.last_name %>
     </h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">
+
+    <p class="card-subtitle mb-2 text-body-secondary">
       <%= @friend.email %> | <%= @friend.phone %> | <%= @friend.twitter %>
-    </h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+    </p>
+
     <div class="btn-group d-flex gap-3">
-      <%= link_to "Edit this friend", edit_friend_path(@friend), class:'btn btn-secondary rounded' %>
-      <%= link_to "Back to friends", friends_path, class:'btn btn-secondary rounded' %>
+      <%= link_to "Edit this friend", edit_friend_path(@friend), class: 'btn btn-secondary rounded' %>
+      <%= link_to "Back to friends", friends_path, class: 'btn btn-secondary rounded' %>
     </div>
   </div>
 </div>
